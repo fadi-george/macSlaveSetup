@@ -2,7 +2,7 @@
 # Credits:
 # RVM: https://www.engineyard.com/blog/how-to-install-ruby-on-a-mac-with-chruby-rbenv-or-rvm
 
-source "$(dirname "$0")"/utils.sh
+source "$(dirname "$0")"/bin/utils.sh
 e_header "iOS Setup"
 
 # Load variables if present

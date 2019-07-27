@@ -1,2 +1,2 @@
 #!/bin/bash
-# Not configured yet.
+# Currently, no setup is needed.

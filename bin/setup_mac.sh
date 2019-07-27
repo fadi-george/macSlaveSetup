@@ -5,4 +5,6 @@ touch ~/.bash_profile
 touch ~/.bashrc
 
 # Source bashrc for login terminal sessions
-echo 'source ~/.bashrc' | cat - ~/.bash_profile > temp && mv temp ~/.bash_profile
+if ! grep -q "source ~/.bashrc" ~/.bash_profile; then
+    echo 'source ~/.bashrc' | cat - ~/.bash_profile > temp && mv temp ~/.bash_profile
+fi
