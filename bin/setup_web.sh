@@ -1,5 +1,5 @@
 #!/bin/bash
-source "$(dirname "$0")"/bin/utils.sh
+source ./utils.sh
 e_header "Web App Setup"
 
 # Load variables if present

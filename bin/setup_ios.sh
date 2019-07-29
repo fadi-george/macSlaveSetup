@@ -1,8 +1,9 @@
 #!/bin/bash
+# NOTE: Call with `bash ./setup_ios.sh`
 # Credits:
 # RVM: https://www.engineyard.com/blog/how-to-install-ruby-on-a-mac-with-chruby-rbenv-or-rvm
 
-source "$(dirname "$0")"/bin/utils.sh
+source ./utils.sh
 e_header "iOS Setup"
 
 # Load variables if present
@@ -23,14 +24,19 @@ fi
 
 if ! cmd_exists "rvm"; then
   \curl -L https://get.rvm.io | bash
-  rvm install ruby --latest
 fi
 if ! grep -q "\$HOME/.rvm/scripts/rvm" ~/.bashrc; then
   echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
 fi
 
 # Reload Terminal session
-source  ~/.bashrc
+source ~/.bashrc
+
+# Get latest Ruby
+rvm use ruby --install --default
+
+rvm -v
+ruby -v
 
 ## Install bundler (v2)
 gem install bundler

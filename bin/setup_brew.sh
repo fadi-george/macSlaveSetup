@@ -2,7 +2,7 @@
 # Credits:
 # Setup: https://github.com/smartlyio/bootstrap/blob/5838565e396664af906aa7880326e15927d4e855/macos-slave-bootstrap.bash
 
-source "$(dirname "$0")"/bin/utils.sh
+source ./utils.sh
 
 e_header "Brew Setup"
 

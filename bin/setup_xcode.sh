@@ -4,7 +4,7 @@
 # Setup: https://github.com/Provenance-Emu/Provenance/blob/36a52f2b2dc2d359da0efd0b59c863283224736d/Scripts/carthage.sh
 # Xcode license: https://apple.stackexchange.com/a/213151
 
-source "$(dirname "$0")"/bin/utils.sh
+source ./utils.sh
 
 ## Brew Installs Command Line Tools
 if ! which -s brew; then
@@ -19,4 +19,5 @@ brew install mas
 mas install 497799835 # Xcode
 
 # accept Xcode license agreements
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 sudo xcodebuild -license accept

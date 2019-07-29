@@ -6,7 +6,7 @@
 # Serial number: https://apple.stackexchange.com/a/40244
 # create node api: https://gist.github.com/Evildethow/be4614ba27882d8f4627a972a624d525
 
-source "$(dirname "$0")"/bin/utils.sh
+source ./utils.sh
 
 load_env
 e_header "SSH/Jenkins Slave Setup"

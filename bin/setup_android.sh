@@ -15,6 +15,7 @@ brew tap adoptopenjdk/openjdk
 brew cask install adoptopenjdk8
 java -version
 
+# Get Android SDK
 brew cask install android-sdk
 
 # Set Android Environment
@@ -25,5 +26,6 @@ fi
 # Reload Terminal session
 source ~/.bashrc
 
+# Agree to SDK licenses
 touch ~/.android/repositories.cfg
 yes | sdkmanager --licenses && sdkmanager --update
